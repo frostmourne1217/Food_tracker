@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	</head>
+	<body>
+		<h1>View Meal Details</h1>
+		<form role="form" action="" method="POST">
+		    {% csrf_token %}
+			<table class="table table-bordered table-striped">
+				<tbody>
+					<tr>
+						<th>Calories</th>
+						<th>{{ meal_form.food.calories}}</th>
+					</tr>
+					<tr>
+						<th>Serving Size</th>
+						<th>{{ meal_form.serving_size }}</th>
+					</tr>
+					<tr>
+						<th>Total Fat</th>
+						<th>{{ meal_form.food.total_fat }}</th>
+					</tr>
+					<tr>
+						<th>Saturated Fat</th>
+						<th>{{ meal_form.food.saturate_fat }}</th>
+						
+					</tr>
+				</tbody>
+			</table>
+			<button type="submit" class="btn btn-success">Save</button>
+		</form>
+	</body>
+</html>
